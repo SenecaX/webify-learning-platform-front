@@ -8,7 +8,7 @@ import { Course } from '../model/backend.model';
 @Injectable()
 export class CoursesService {
 
-    private coursesUrl = "/courses"
+    private coursesUrl = "/private/courses"
     headers: any;
     accessToken = localStorage.getItem('access_token');
     httpOptions = {
@@ -21,7 +21,7 @@ export class CoursesService {
     }
 
     public getCoursesList(): Observable<Course> {
-        return this.http.get<Course>(this.coursesUrl);
+        return this.http.get<Course>(this.coursesUrl, this.httpOptions);
     }
 
 
