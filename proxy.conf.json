@@ -1,0 +1,14 @@
+{
+    "/private/*": {
+      "target": "http://localhost:8085",
+      "secure": false
+    },
+    "/public/*": {
+      "target": "http://localhost:8085",
+      "secure": false
+    },
+    "/oauth/*": {
+      "target": "http://localhost:8085",
+      "secure": false
+    }
+  }
